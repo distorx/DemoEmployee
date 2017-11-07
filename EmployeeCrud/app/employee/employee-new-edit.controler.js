@@ -5,24 +5,32 @@
         .module('app.employee')
         .controller('EmployeeNewEditController', EmployeeNewEditController);
 
-    EmployeeNewEditController.$inject = ['EmployeeService','JobPositionService','CompanyService'];
+    EmployeeNewEditController.$inject = ['EmployeeService','JobPositionService','CompanyService','ServiceEquipmentService'];
 
-    function EmployeeNewEditController(EmployeeService, JobPositionService, CompanyService) {
+    function EmployeeNewEditController(EmployeeService, JobPositionService, CompanyService,ServiceEquipmentService) {
 
         var vm = this;
         vm.title = 'New Employee Initiation';
 
         vm.employee = new EmployeeService();
 
-        //vm.employee.CreatedDate = new Date();
+        vm.finishedWizard = function () {
+            console.log('finished wizard');
+        };
+
+        vm.cancelledWizard = function () {
+            console.log('cancelled wizard');
+        };
 
         vm.jobPositions = JobPositionService.query(function () {
-            console.log(vm.jobPositions);
+            //console.log(vm.jobPositions);
         });
 
-        vm.companies = CompanyService.query(function (result) {
-            console.log(vm.companies);
+        vm.companies = CompanyService.query(function () {
+            //console.log(vm.companies);
         })
+
+        vm.serviceEquipments = ServiceEquipmentService.query();
 
     };
 

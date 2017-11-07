@@ -4,6 +4,7 @@
         'app.core',
         'app.employee',
         'app.job-position',
-        'app.company'
+        'app.company',
+        'app.service-equipment'
     ]);
 })();

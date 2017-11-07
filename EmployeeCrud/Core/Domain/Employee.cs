@@ -22,6 +22,9 @@ namespace EmployeeCrud.Core.Domain
         public string MobileNumber { get; set; }
         public DateTime StartDate { get; set; }
         public virtual ICollection<ServiceEquipment> ServicesEquipments { get; set; }
+
+        public string OtherServiceEquipment { get; set; }
+
         public string AdditionalServices { get; set; }
 
         public int CompanyId { get; set; }

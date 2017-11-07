@@ -47,7 +47,8 @@
     <script src="~/Scripts/moment/moment.js"></script>
     <script src="~/Scripts/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
     <link href="~/Scripts/angularjs-datepicker/dist/angular-datepicker.min.css" rel="stylesheet" />
-
+    <link href="~/Scripts/angular-wizard/dist/angular-wizard.min.css" rel="stylesheet" />
+    <script src="~/Scripts/angular-wizard/dist/angular-wizard.min.js"></script>
 
     @* modules & core *@
     <script src="~/app/core/core.module.js"></script>
@@ -56,16 +57,19 @@
     <script src="~/app/employee/employee.module.js"></script>
     <script src="~/app/job-position/job-position.module.js"></script>
     <script src="~/app/Company/company.module.js"></script>
+    <script src="~/app/service-equipment/service-equipment.module.js"></script>
 
     @* controllers *@
     <script src="~/app/employee/employee-list.controller.js"></script>
     <script src="~/app/employee/employee-new-edit.controler.js"></script>
+
     
 
     @* services *@
     <script src="~/app/employee/employee.service.js"></script>
     <script src="~/app/job-position/job-position.service.js"></script>
     <script src="~/app/Company/company.service.js"></script>
+    <script src="~/app/service-equipment/service-equipment.service.js"></script>
 
     @RenderSection("scripts", required: false)
 </body>

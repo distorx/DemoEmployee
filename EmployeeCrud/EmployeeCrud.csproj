@@ -177,6 +177,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobPositionController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ServiceEquipmentController.cs" />
     <Compile Include="Core\Domain\Company.cs" />
     <Compile Include="Core\Domain\Employee.cs" />
     <Compile Include="Core\Domain\JobPosition.cs" />
@@ -197,6 +198,10 @@
     <Compile Include="Migrations\201711071150211_NewFields.cs" />
     <Compile Include="Migrations\201711071150211_NewFields.Designer.cs">
       <DependentUpon>201711071150211_NewFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711071433551_NewFields2.cs" />
+    <Compile Include="Migrations\201711071433551_NewFields2.Designer.cs">
+      <DependentUpon>201711071433551_NewFields2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -224,6 +229,8 @@
     <Content Include="app\employee\employee.service.js" />
     <Content Include="app\job-position\job-position.module.js" />
     <Content Include="app\job-position\job-position.service.js" />
+    <Content Include="app\service-equipment\service-equipment.module.js" />
+    <Content Include="app\service-equipment\service-equipment.service.js" />
     <Content Include="App_Data\aspnet-EmployeeCrud-20171105034000.mdf" />
     <Content Include="App_Data\aspnet-EmployeeCrud-20171105034000_log.ldf">
       <DependentUpon>aspnet-EmployeeCrud-20171105034000.mdf</DependentUpon>
@@ -469,6 +476,20 @@
     <Content Include="Scripts\angular-ui-bootstrap\template\typeahead\typeahead-match.html.js" />
     <Content Include="Scripts\angular-ui-bootstrap\template\typeahead\typeahead-popup.html" />
     <Content Include="Scripts\angular-ui-bootstrap\template\typeahead\typeahead-popup.html.js" />
+    <Content Include="Scripts\angular-wizard\dist\angular-wizard.css" />
+    <Content Include="Scripts\angular-wizard\dist\angular-wizard.js" />
+    <Content Include="Scripts\angular-wizard\dist\angular-wizard.min.css" />
+    <Content Include="Scripts\angular-wizard\dist\angular-wizard.min.js" />
+    <Content Include="Scripts\angular-wizard\Gruntfile.js" />
+    <Content Include="Scripts\angular-wizard\karma.conf.js" />
+    <Content Include="Scripts\angular-wizard\src\angularModule.js" />
+    <Content Include="Scripts\angular-wizard\src\step.html" />
+    <Content Include="Scripts\angular-wizard\src\step.js" />
+    <Content Include="Scripts\angular-wizard\src\wizard.html" />
+    <Content Include="Scripts\angular-wizard\src\wizard.js" />
+    <Content Include="Scripts\angular-wizard\src\wizardButtons.js" />
+    <Content Include="Scripts\angular-wizard\src\wizardHandler.js" />
+    <Content Include="Scripts\angular-wizard\test\angularWizardSpec.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angularjs-datepicker\assets\js\index.js" />
@@ -555,6 +576,16 @@
     <Content Include="Scripts\angularjs-datepicker\package.json" />
     <Content Include="Scripts\angularjs-datepicker\README.md" />
     <Content Include="Scripts\angularjs-datepicker\themes\README.md" />
+    <Content Include="Scripts\angular-wizard\.npmignore" />
+    <Content Include="Scripts\angular-wizard\.travis.yml" />
+    <Content Include="Scripts\angular-wizard\bower.json" />
+    <Content Include="Scripts\angular-wizard\CHANGELOG.md" />
+    <Content Include="Scripts\angular-wizard\CONTRIBUTE.md" />
+    <Content Include="Scripts\angular-wizard\dist\angular-wizard.less" />
+    <Content Include="Scripts\angular-wizard\license.md" />
+    <Content Include="Scripts\angular-wizard\package.json" />
+    <Content Include="Scripts\angular-wizard\README.md" />
+    <Content Include="Scripts\angular-wizard\src\angular-wizard.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1937,6 +1968,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711071150211_NewFields.resx">
       <DependentUpon>201711071150211_NewFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071433551_NewFields2.resx">
+      <DependentUpon>201711071433551_NewFields2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

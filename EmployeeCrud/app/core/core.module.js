@@ -4,6 +4,8 @@
     angular
         .module('app.core', [
             'ngResource',
-            '720kb.datepicker'
+            '720kb.datepicker',
+            'mgo-angular-wizard'
+
         ]);
 })();
