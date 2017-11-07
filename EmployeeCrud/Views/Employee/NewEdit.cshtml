@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "NewEdit";
+}
+
+<div ng-controller="EmployeeNewEditController as vm">
+    <h2>{{vm.title}}</h2>
+    <p>Complete this form whenever a new employee is being initiated. Indicate all services and equipment needed.</p>
+    
+    <span style="color: red;">* Required</span><br /><br />
+    <form>
+        <label>Today's Date</label>
+        <datepicker date-format="MM/dd/y" placeholder="Date">
+            <input ng-model="vm.employee.CreateDate" type="text" />
+        </datepicker>
+        <div class="form-group">
+            <label>Hiring Manager's email address</label>
+            <input class="form-control" ng-model="vm.employee.HiringManagerEmail" placeholder="Your Answer" />
+        </div>
+        <div class="form-group">
+            <label>New Employee's Full Name</label>
+            <input class="form-control" ng-model="vm.employee.FullName" placeholder="Your Answer" />
+        </div>
+        <label>Position new employee is being hired for</label>
+        <div ng-repeat="position in vm.jobPositions">
+            <label>
+                <input type="radio" ng-model="vm.employee.JobPosition" ng-value="position.Id">
+                {{position.Name}}
+            </label><br />
+        </div>
+        <input ng-show="vm.employee.JobPosition == 31" ng-model="vm.employee.OtherJobPosition" placeholder="Your Answer" />
+        <div class="form-group">
+            <label>Employee's Personal E-mail</label>
+            <input class="form-control" ng-model="vm.employee.PersonalEmail" placeholder="Your Answer" />
+        </div>
+        <label>Start Date</label>
+        <datepicker date-format="MM/dd/y" placeholder="Date">
+            <input ng-model="vm.employee.CreateDate" type="text" />
+        </datepicker>
+        
+    </form>
+
+    {{vm.employee}}
+
+</div>
+
+
