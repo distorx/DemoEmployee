@@ -25,7 +25,7 @@
                 <label>Position new employee is being hired for</label>
                 <div ng-repeat="position in vm.jobPositions">
                     <label>
-                        <input type="radio" ng-model="vm.employee.jobPosition" ng-value="position.id">
+                        <input type="radio" ng-model="vm.employee.jobPositionId" ng-value="position.id">
                         {{position.name}}
                     </label><br />
                 </div>
@@ -48,7 +48,11 @@
                 <p>Here you will pick the services new employee will need to be enrolled in, necessary equipment and company he/she will be working for, as well as their role.</p>
                 <div ng-repeat="serviceEquipment in vm.serviceEquipments">
                     <label><input type="checkbox" ng-model="serviceEquipment.selected"> {{serviceEquipment.name}} <input ng-show="serviceEquipment.id == 9" ng-model="vm.employee.OtherServiceEquipment" placeholder="Your Answer" /></label><br />
-                    
+                </div>
+                <h2>Additional Services</h2>
+                <p>Please clarify if new employee is inheriting any equipment from a previous employee such as desks, phones, computers, etc. Elaborate on additional services needed not available from the options above.</p>
+                <div class="form-group">
+                    <input class="form-control" ng-model="vm.employee.additionalServices" placeholder="Your Answer" />
                 </div>
                 <div style="margin-top: 30px;">
                     <input type="submit" class="btn btn-sm" wz-previous value="Preview" />
@@ -56,7 +60,16 @@
                 </div>
             </wz-step>
             <wz-step wz-title="Page 3">
-                <p>Page 3</p>
+                <h1>What company will employee work for?</h1>
+                <p>This will determine access levels on the next step.</p>
+                <div ng-repeat="company in vm.companies">
+                    <label>
+                        <input type="radio" ng-model="vm.employee.companyId" ng-value="company.id">
+                        {{company.name}}
+                    </label><br />
+                </div>
+                <input ng-show="vm.employee.companyId == 23" ng-model="vm.employee.OtherJobPosition" placeholder="Your Answer" />
+
                 <input type="submit" class="btn btn-sm" wz-previous value="Preview" />
                 <input type="submit" class="btn btn-sm" wz-next value="Next" />
             </wz-step>
