@@ -18,6 +18,7 @@ namespace EmployeeCrud.Persistence
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<JobPosition> JobPositions { get; set; }
         public virtual DbSet<ServiceEquipment> ServiceEquipments { get; set; }
+        public virtual DbSet<Building> Buildings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

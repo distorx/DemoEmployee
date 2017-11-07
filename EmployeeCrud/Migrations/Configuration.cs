@@ -21,7 +21,22 @@ namespace EmployeeCrud.Migrations
             //SeedJobPosition(context);
             //SeedCompanies(context);
             //SeedServiceEquipments(context);
+            //SeedBuilding(context);
 
+        }
+
+        private void SeedBuilding(EmpContext context)
+        {
+            List<Building> list = new List<Building> {
+                new Building {Name = "Headquarters. Call Center - building 200"},
+                new Building {Name = "Headquarters, Main Building - building 300"},
+                new Building {Name = "Other:"}
+            };
+
+            foreach (var building in list)
+            {
+                context.Buildings.Add(building);
+            }
         }
 
         private void SeedCompanies(EmpContext context)

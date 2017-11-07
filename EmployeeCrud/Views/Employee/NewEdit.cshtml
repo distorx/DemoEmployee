@@ -6,7 +6,6 @@
     <h2>{{vm.title}}</h2>
     <span style="color: red;">* Required</span><br /><br />
     <form>
-
         <wizard on-finish="vm.finishedWizard()" on-cancel="vm.cancelledWizard()">
             <wz-step wz-title="Page 1" canexit="exitValidation">
                 <p>Complete this form whenever a new employee is being initiated. Indicate all services and equipment needed.</p>
@@ -69,7 +68,12 @@
                     </label><br />
                 </div>
                 <input ng-show="vm.employee.companyId == 23" ng-model="vm.employee.OtherJobPosition" placeholder="Your Answer" />
-
+                <h2>Additional Information</h2>
+                <p>Please elaborate on whether user will have modified access to specific buildings.</p>
+                
+                <div class="form-group">
+                    <input class="form-control" ng-model="vm.employee.companyOther" placeholder="Your Answer" />
+                </div>
                 <input type="submit" class="btn btn-sm" wz-previous value="Preview" />
                 <input type="submit" class="btn btn-sm" wz-next value="Next" />
             </wz-step>

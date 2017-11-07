@@ -10,6 +10,7 @@ namespace EmployeeCrud.Core.Domain
         public Employee()
         {
             ServicesEquipments = new HashSet<ServiceEquipment>();
+            Buildings = new HashSet<Building>();
         }
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -22,6 +23,10 @@ namespace EmployeeCrud.Core.Domain
         public string MobileNumber { get; set; }
         public DateTime StartDate { get; set; }
         public virtual ICollection<ServiceEquipment> ServicesEquipments { get; set; }
+
+        public virtual ICollection<Building> Buildings { get; set; }
+        public string OtherBuilding { get; set; }
+        public string RestrictedAccess {get; set;}
 
         public string OtherServiceEquipment { get; set; }
 

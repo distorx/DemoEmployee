@@ -178,6 +178,7 @@
     <Compile Include="Controllers\JobPositionController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServiceEquipmentController.cs" />
+    <Compile Include="Core\Domain\Building.cs" />
     <Compile Include="Core\Domain\Company.cs" />
     <Compile Include="Core\Domain\Employee.cs" />
     <Compile Include="Core\Domain\JobPosition.cs" />
@@ -202,6 +203,10 @@
     <Compile Include="Migrations\201711071433551_NewFields2.cs" />
     <Compile Include="Migrations\201711071433551_NewFields2.Designer.cs">
       <DependentUpon>201711071433551_NewFields2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711071546542_BuildingAndOtherStuff.cs" />
+    <Compile Include="Migrations\201711071546542_BuildingAndOtherStuff.Designer.cs">
+      <DependentUpon>201711071546542_BuildingAndOtherStuff.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1971,6 +1976,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711071433551_NewFields2.resx">
       <DependentUpon>201711071433551_NewFields2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071546542_BuildingAndOtherStuff.resx">
+      <DependentUpon>201711071546542_BuildingAndOtherStuff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
